@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+/* #main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+} */
+
+.loginbutton, .registerbutton{
+ width: 7%;
+ min-width: 120px;
+}
+
+.registerbutton{
+  display: inline-block;
+}
+
+.logindiv{
+  justify-self: end;
+}
+
+.regdiv{
+  min-height: 450px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainrow{
+  display: flex;
+  align-self: stretch;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+
+.maininfo{
+  background: rgb(54, 217, 182);
+  background: linear-gradient(90deg, rgb(54, 106, 217) 0%, rgb(32, 152, 92) 43%); 
+}
+
+
+
+.title{
+  width: 50%;
+  height: 25%;
+  min-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+#header{
+  margin-top: 5%;
+  font-size: 40px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
