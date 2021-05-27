@@ -14,7 +14,7 @@ import axios from 'axios';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar variant="dark" className="navbarClass">
+    <Navbar variant="light" className="navbarClass">
           <Navbar.Brand href="#home">LOGO</Navbar.Brand>
           <Nav className="mr-auto">
               <Nav.Link href="#home">Home</Nav.Link>
@@ -23,7 +23,7 @@ ReactDOM.render(
           </Nav>
           <Nav>
               <FormControl type="text" placeholder="Search Post" className="mr-sm-1" />
-              <Button variant="info" className="mr-sm-2">Search</Button>
+              <Button variant="success" className="mr-sm-2">Search</Button>
               
           </Nav>
           <Nav>

@@ -85,7 +85,7 @@
   font-family: 'Roboto', sans-serif;
 }
 .buttonPost{
-  background-color: #a71d31!important;
+  background-color: #e49a12!important;
   border: none!important;
 }
 
@@ -94,10 +94,8 @@
 }
 
 .navbarClass{
-  background-color: #a71d31!important;
+  background-color: #e49a12!important;
 }
-
-
 
 @media screen and (max-width: 530px) {
   .card{

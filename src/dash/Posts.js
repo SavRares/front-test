@@ -4,6 +4,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import PostCard from "./PostCard.js";
 import axios from 'axios';
+import Spinner from 'react-bootstrap/Spinner';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from './MapContainer.js';
+
+const mapStyles = {
+    width: '100%',
+    height: '100%'
+  };
 
 export class Posts extends Component {
     constructor(props){
@@ -43,22 +51,26 @@ export class Posts extends Component {
 
   render() {
       if(this.state.loading){
-          return <p>Loading...</p>
+          return <Spinner animation="border" variant="warning"/>
       }
     else{
         return (
+            <div>    
+            <MapContainer />
             <Container className="mainPosts">
             <Row>
                 {this.state.posts.map((post) =>{ 
                         return(
                         <Col>
-                            <PostCard  title={post.title} desc={post.content} reward="10"/>
+                            <PostCard  title={post.title} desc={post.content} reward={post.reward?post.reward:0}/>
                         </Col>
                         );
                     })}
                
             </Row>
         </Container>
+                        
+        </div>
         );
     }
     }

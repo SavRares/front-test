@@ -10,10 +10,19 @@ export default function CreatePost() {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+    const handleChange = (e) => {
+        var name = e.target.name;
+        var value = e.target.value;
+        console.log('Name: ', name);
+        console.log("Value: ", value);
+    }
   
+
     return (
       <>
-        <Button variant="info" onClick={handleShow}>
+        <Button variant="success" onClick={handleShow}>
           Add Post
         </Button>
   
@@ -23,15 +32,15 @@ export default function CreatePost() {
           </Modal.Header>
           <Modal.Body>
             <Form.Group>
-            <Form.Control size="lg" type="text" placeholder="Insert the title of the announcement here " />
+            <Form.Control size="lg" type="text" placeholder="Insert the title of the announcement here " name="title" onChange={handleChange}/>
             <br />
-            <Form.Control size="lg" type="text" placeholder="Write a description" />
+            <Form.Control size="lg" type="text" placeholder="Write a description" name="content" name="content" onChange={handleChange}/>
             <br />
             <Form.Control size="md" type="text" placeholder="Reward(e.g. 25$)" />
             <br />
             <Form>
                 <Form.Group>
-                    <Form.File id="exampleFormControlFile1" label="Upload a photo of your lost pet" />
+                    <Form.File id="exampleFormControlFile1" label="Upload a photo of your lost pet" name="image" onChange={handleChange}/>
                 </Form.Group>
             </Form>
         </Form.Group>
